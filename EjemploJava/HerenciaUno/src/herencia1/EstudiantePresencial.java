@@ -44,7 +44,17 @@ public class EstudiantePresencial extends Estudiante{
     
     @Override
     public String toString(){
-        return nombresEstudiante;
+        String cadena = String.format("Nombre: %s\n"
+                + "Costo Matricula: %.2f\n",
+                nombresEstudiante,
+                matriculaPresencial);
+        return cadena;
+        
     }
+    /* 
+    En la clase toString podemos hacer uso del atributo nombreEstudiante
+    a pesar de que no se encuentre en la clase, ya que es un atribbuto 
+    que heredamos de la superclase
+    */
     
 }
